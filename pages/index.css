@@ -5,6 +5,10 @@ div, section {
   outline: 1px solid red;
 }
 
+.link:hover {
+  opacity: .6;
+}
+
 .page {
   background-color: #000;
   padding: 45px 0 60px;
@@ -60,6 +64,7 @@ div, section {
 /* Profile */
 .profile {
   max-width: 880px;
+  min-width: 282px;
   margin: 0 auto;
   padding: 36.25px 0 47.25px;
   display: flex;
@@ -177,7 +182,7 @@ div, section {
   background-position: center;
   width: 150px;
   height: 50px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #fff;
   border-radius: 2px;
   align-self: center;
 }
@@ -196,4 +201,66 @@ div, section {
   }
 }
 
-/* Elements */
+/* Cards */
+.cards {
+  max-width: 880px;
+  min-width: 282px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 918px)  {
+  .cards {
+    padding: 42px 0 36px;    
+    max-width: calc(100% - 38px);
+  }
+}
+
+.cards__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px 17px;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+}
+
+.cards__item {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.cards__img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.cards__description {
+  margin: 25px 20px 31px 21px;
+  display: flex;
+  justify-content: space-between;;
+}
+
+.cards__title {
+  margin: 0;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: calc(100% - 50px);
+}
+
+.cards__btn {
+  background-image: url(../images/btn-heart.svg);
+  width: 22px;
+  height: 19px;
+  align-self: center;
+}
+
+.cards__btn:hover {
+  opacity: .5;
+}
+
+.cards__btn_active {
+  background-image: url(../images/btn-heart_active.svg);
+}
