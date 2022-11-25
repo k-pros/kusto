@@ -1,17 +1,13 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/fonts.css);
 
-div, section {
-  outline: 1px solid red;
-}
-
 .link:hover {
   opacity: .6;
 }
 
 .page {
   background-color: #000;
-  padding: 45px 0 60px;
+  padding-top: 45px;
   font-family: 'Inter', Arial, sans-serif;
   color: white;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +20,7 @@ div, section {
 
 @media screen and (max-width: 918px)  {
   .page {
-    padding: 28px 0 36px;    
+    padding-top: 28px;    
   }
 }
 
@@ -66,7 +62,7 @@ div, section {
   max-width: 880px;
   min-width: 282px;
   margin: 0 auto;
-  padding: 36.25px 0 47.25px;
+  padding: 40px 0 51px;
   display: flex;
   justify-content: space-between;
 }
@@ -92,7 +88,9 @@ div, section {
 @media screen and (max-width: 600px)  {
   .profile__container {
     flex-direction: column;
-    margin-bottom: 36px;
+    margin-bottom: 33px;
+    gap: 25px;
+
   }
 }
 
@@ -113,7 +111,7 @@ div, section {
 
 @media screen and (max-width: 768px)  {
   .profile__info {
-    gap: 14px 10px;
+    gap: 8px 10px;
   }
 }
 
@@ -165,6 +163,7 @@ div, section {
   background-position: center;
   width: 24px;
   height: 24px;
+  box-sizing: border-box;
   border: 1px solid #fff;
   align-self: center;
 }
@@ -182,6 +181,7 @@ div, section {
   background-position: center;
   width: 150px;
   height: 50px;
+  box-sizing: border-box;
   border: 2px solid #fff;
   border-radius: 2px;
   align-self: center;
@@ -191,6 +191,7 @@ div, section {
   .profile__add-button {
     width: 115px;
     height: 38px;
+    background-size: 16px 16px;
   }
 }
 
@@ -210,7 +211,6 @@ div, section {
 
 @media screen and (max-width: 918px)  {
   .cards {
-    padding: 42px 0 36px;    
     max-width: calc(100% - 38px);
   }
 }
@@ -236,7 +236,7 @@ div, section {
 }
 
 .cards__description {
-  margin: 25px 20px 31px 21px;
+  margin: 25px 20px 25px 21px;
   display: flex;
   justify-content: space-between;;
 }
@@ -248,6 +248,9 @@ div, section {
   white-space: nowrap;
   overflow: hidden;
   max-width: calc(100% - 50px);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .cards__btn {
@@ -263,4 +266,36 @@ div, section {
 
 .cards__btn_active {
   background-image: url(../images/btn-heart_active.svg);
+}
+
+
+/* footer */
+.footer {
+  padding: 67px 0 60px;
+  margin: 0 auto;
+  max-width: 880px;
+}
+
+@media screen and (max-width: 918px)  {
+  .footer {
+    padding: 48px 0 36px;
+    box-sizing: border-box;
+    max-width: calc(100% - 38px);
+  }
+}
+
+.footer__copyright {
+  color: #545454;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+}
+
+@media screen and (max-width: 768px)  {
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 17px; 
+  }
 }
